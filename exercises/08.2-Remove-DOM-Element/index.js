@@ -1,5 +1,7 @@
 let list = document.querySelector("#parentLi");
 let childs = list.childNodes; 
 
-let elementToDelete = childs[2];
+console.log(childs);
+
+let elementToDelete = childs[3];
 elementToDelete.parentNode.removeChild(elementToDelete);
