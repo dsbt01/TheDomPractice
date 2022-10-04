@@ -1,6 +1,6 @@
 let countries = ["USA", "France", "Italy", "Brazil", "Colombia", "Belize", "Venezuela"];
 // your code here
-select = document.getElementById('mySelect');
+let select = document.getElementById('mySelect');
 
 for (var i = 0; i < countries.length; i++){
     var opt = document.createElement('option');
