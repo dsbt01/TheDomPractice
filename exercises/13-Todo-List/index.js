@@ -16,6 +16,6 @@ elementTextBox.addEventListener("keypress", function(event) {
         let aList = document.getElementsByTagName ('ul')[0];
         aList.append(liElem);
         elementTextBox.value = "";
- 		event.preventDefault();
+ 		    event.preventDefault();
      }
 });
