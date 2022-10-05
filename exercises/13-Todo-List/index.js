@@ -7,6 +7,9 @@ elementTextBox.addEventListener("keypress", function(event) {
 
         var trashIcon = document.createElement("i");
         trashIcon.className="fa fa-trash";
+
+        trashIcon.addEventListener("click", deleteIconClick, true);
+
         spamElement.appendChild(trashIcon);
 
         liElem.appendChild(spamElement);
@@ -19,3 +22,8 @@ elementTextBox.addEventListener("keypress", function(event) {
  		    event.preventDefault();
      }
 });
+
+function deleteIconClick()
+{
+  console.log("Clicked");
+}
