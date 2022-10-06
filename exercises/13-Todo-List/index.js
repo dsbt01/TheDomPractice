@@ -7,8 +7,7 @@ elementTextBox.addEventListener("keypress", function(event) {
 
         var trashIcon = document.createElement("i");
         trashIcon.className="fa fa-trash";
-
-        trashIcon.addEventListener("click", deleteIconClick, true);
+      
 
         spamElement.appendChild(trashIcon);
 
@@ -23,7 +22,17 @@ elementTextBox.addEventListener("keypress", function(event) {
      }
 });
 
-function deleteIconClick()
-{
-  console.log("Clicked");
-}
+let ulElement = document.getElementsByTagName ('ul')[0];
+ulElement.addEventListener('click', function(e) {
+  let liElement = null;
+
+  for(let i =0; i < e.path.length ; i++)
+  {
+    if (e.path[i].nodeName === "LI")
+    {
+      liElement = e.path[i];
+      break;
+    }
+  }
+  liElement.parentNode.removeChild(liElement);
+})
